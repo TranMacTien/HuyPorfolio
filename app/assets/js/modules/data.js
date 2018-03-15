@@ -3,7 +3,8 @@
 		'gallery': [
 			{
 				'url': 'abc',
-				'description': 'TYPOGRAPHY'
+				'type': 'TYPOGRAPHY',
+				'title': 'CÙNG ANH'
 			}
 		]
 	}

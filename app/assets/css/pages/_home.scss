@@ -29,6 +29,18 @@
 	.gallery__item {
 		border-bottom: 3px solid $color-gray_l;
 		margin-bottom: 10px;
+		&:hover {
+			border-bottom: 3px solid #000;
+			.gallery__image > img {
+				transform: scale(1.2);
+			}
+		}
+	}
+	.gallery__image {
+		overflow: hidden;
+		> img {
+			transition: all .5s ease;
+		}
 	}
 	.gallery__label {
 		padding: 10px;
