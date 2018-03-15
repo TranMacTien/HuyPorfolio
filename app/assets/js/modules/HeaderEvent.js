@@ -9,6 +9,10 @@ export default class HeaderEvent {
 		this.logo = $('.logo');
 		this.handleEvent();
 	}
+	getScreenWidth() {
+		this.scrWidth = $(window).width();
+		return this.scrWidth;
+	}
 	handleEvent() {
 		this.menuBtnEvent();
 		this.menuCloseEvent();
@@ -28,7 +32,6 @@ export default class HeaderEvent {
 		this.overlay.on('click', () => {
 			this.closeSideBar();
 		})
-
 	}
 	closeSideBar() {
 		this.navMobile.removeClass('active');

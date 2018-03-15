@@ -65,7 +65,9 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "imagesloaded": "^4.1.4",
     "jquery": "^3.2.1",
+    "jquery-bridget": "^2.0.1",
     "masonry-layout": "^4.2.1",
     "slick-carousel": "^1.8.1",
     "tingle.js": "^0.12.0"
