@@ -1,0 +1,35 @@
+.slick-slider {
+	margin: 0;
+	padding: 0;
+}
+
+.slick-dots {
+	margin: 20px auto;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+
+		button {
+			@include clear-text;
+			padding: 0;
+			text-align: center;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			border: 1px solid $colorPrimary;
+		}
+
+		+ li {
+			margin-left: 10px;
+		}
+
+		&.slick-active {
+			button {
+				background-color: $colorPrimary;
+			}
+		}
+	}
+}
