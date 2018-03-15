@@ -5,21 +5,42 @@ export default class HeaderEvent {
 		this.menuBtn = $('.menu-btn');
 		this.navMobile = $('.nav-mobile');
 		this.closeBtn = $('.nav__close');
+		this.overlay = $('.overlay');
+		this.logo = $('.logo');
 		this.handleEvent();
 	}
 	handleEvent() {
 		this.menuBtnEvent();
 		this.menuCloseEvent();
+		this.handleLogo();
 	}
 
 	menuBtnEvent() {
 		this.menuBtn.on('click', () => {
 			this.navMobile.addClass('active');
+			this.overlay.addClass('active');
 		})
 	}
 	menuCloseEvent() {
 		this.closeBtn.on('click', () => {
-			this.navMobile.removeClass('active');
+			this.closeSideBar();
+		})
+		this.overlay.on('click', () => {
+			this.closeSideBar();
+		})
+
+	}
+	closeSideBar() {
+		this.navMobile.removeClass('active');
+		this.overlay.removeClass('active');
+	}
+	handleLogo() {
+		$(window).on('scroll', () => {
+			if($(window).scrollTop() > 300 && !this.logo.hasClass('fixed')) {
+				this.logo.addClass('fixed');
+			} else if($(window).scrollTop() <= 300) {
+				this.logo.removeClass('fixed');
+			}
 		})
 	}
 }
