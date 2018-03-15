@@ -1,5 +1,17 @@
+@font-face { 
+    font-family: 'SVN-Agency'; 
+    src: url('../fonts/SVN-Agency.eot'); 
+    src: url('../fonts/SVN-Agency.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/SVN-Agency.woff') format('woff'), 
+         url('../fonts/SVN-Agency.ttf') format('truetype'), 
+         url('../fonts/SVN-Agency.svg#SVN-AgencyFB') format('svg'); 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+
+
 $font-default: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $imgPath: "../images";
-
+$font-Agency: 'SVN-Agency', sans-serif;
 $colorBurger: #000;
 $colorPrimary: #000;

@@ -6,7 +6,10 @@ export default class SlickCarousel {
 	constructor(el) {
 		$(el).slick({
 			dots: true,
-			arrow: true
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			fade: true
 		});
 	}
 }
