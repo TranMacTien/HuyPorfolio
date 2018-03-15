@@ -15,7 +15,7 @@ body {
 }
 
 img {
-	display: inline-block;
+	display: block;
 	max-width: 100%;
 }
 
@@ -57,7 +57,25 @@ hr {
 .text-right {
 	text-align: right;
 }
-
+.text-justify {
+	text-align: justify;
+}
 .container {
-	padding: 0 20px;
+	padding: 0 10px 10px;
+}
+
+.block-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.col-half {
+	width: 50%;
+}
+
+.text {
+	font-size: 12px;
+	margin: 0;
+	@include screen(small) {
+		font-size: 16px;
+	}
 }

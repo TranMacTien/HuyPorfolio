@@ -1,1 +1,36 @@
 /* HOME */
+.section__title {
+	font-family: $font-Agency;
+	font-size: 20px;
+	margin: 10px 0;
+}
+.section-about {
+	.section__content {
+		margin: 0 -10px;
+		.col-half {
+			padding: 10px;
+		}
+		.text {
+			margin: 0;
+			font-size: 12px;
+		}
+		.avatar__text {
+			font-size: 12px;
+			margin: 0;
+		}
+		.avatar__image {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.section-porfolio {
+	padding-bottom: 20px;
+	.gallery__item {
+		border-bottom: 3px solid $color-gray_l;
+		margin-bottom: 10px;
+	}
+	.gallery__label {
+		padding: 10px;
+	}
+}

@@ -8,8 +8,8 @@ export default class SlickCarousel {
 			dots: true,
 			arrows: false,
 			autoplay: true,
-			autoplaySpeed: 5000,
-			fade: true
+			autoplaySpeed: 5000
+			// fade: true
 		});
 	}
 }

@@ -4,7 +4,9 @@ $grid-col-alt: 5;
 .row {
 	@extend %clearfix;
 }
-
+.col {
+	float: left;
+}
 /*
 xs: 640px,
 small: 768px,
