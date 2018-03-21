@@ -11,3 +11,17 @@
         transform: translate3d(0, 0, 0);
     }
 }
+
+.ani-hero-text {
+    animation: ani-hero-text 1s .5s ease both;
+}
+@keyframes ani-hero-text {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
