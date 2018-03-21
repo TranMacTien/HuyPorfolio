@@ -7,11 +7,11 @@ export default class HeaderEvent {
 		this.closeBtn = $('.nav__close');
 		this.overlay = $('.overlay');
 		this.logo = $('.logo');
+		this.heightNav = !$('.logo').hasClass('.fixed') ? $('.logo').height(): 0;
 		this.handleEvent();
 	}
 	getScreenWidth() {
-		this.scrWidth = $(window).width();
-		return this.scrWidth;
+		return $(window).width();
 	}
 	handleEvent() {
 		this.menuBtnEvent();
@@ -23,6 +23,7 @@ export default class HeaderEvent {
 	menuBtnEvent() {
 		this.menuBtn.on('click', () => {
 			this.navMobile.addClass('active');
+			$('.nav-mobile .nav__item').addClass('menuFadeIn');
 			this.overlay.addClass('active');
 		})
 	}
@@ -37,6 +38,7 @@ export default class HeaderEvent {
 	closeSideBar() {
 		this.navMobile.removeClass('active');
 		this.overlay.removeClass('active');
+		$('.nav-mobile .nav__item').removeClass('menuFadeIn');
 	}
 	handleLogo() {
 		$(window).on('scroll', () => {
@@ -54,11 +56,15 @@ export default class HeaderEvent {
 			const _this = $(e.target);
 			const scrollAnchor = _this.attr('data-scroll');
 			if(scrollAnchor === 'home') {
-
-			} else if(scrollAnchor === 'contact') {
-
+				$('html, body').animate({
+					scrollTop: 0
+				}, 600);
 			} else {
-
+				$('html, body').animate({
+					scrollTop: $(`#${scrollAnchor}`).offset().top - this.heightNav
+				}, 600, () => {
+					this.closeSideBar();
+				});
 			}
 		})
 	}

@@ -4,20 +4,20 @@ import imagesLoaded from 'imagesloaded';
 import Masonry from 'masonry-layout';
 export default class MasonryLayout {
 	constructor() {
+		jQueryBridget( 'masonry', Masonry, $ );
 		this.layout();
 		$(window).on('resize', () => {
 			this.layout();
 		})
 	}
 	layout() {
-		jQueryBridget( 'masonry', Masonry, $ );
-		let $grid = $('.gallery').masonry({
+		this.$grid = $('.gallery').masonry({
 			itemSelector: '.gallery__item',
 			horizontalOrder: true
 		});
 		imagesLoaded.makeJQueryPlugin($);
-		$grid.imagesLoaded().progress(function() {
-			$grid.masonry();
+		this.$grid.imagesLoaded().progress(() => {
+			this.$grid.masonry();
 		})
 	}
 }

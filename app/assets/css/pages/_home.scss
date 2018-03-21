@@ -5,6 +5,9 @@
 	margin: 10px 0;
 	@include screen(small) {
 		font-size: 25px;
+		margin: 40px 0;
+	}
+	@include screen(medium) {
 		margin: 65px 0;
 	}
 }
@@ -27,11 +30,17 @@
 		.introduce {
 			.text {
 				@include screen(small) {
+					font-size: 18px;
+				}
+				@include screen(medium) {
 					font-size: 24px;
 				}
 				&:last-child {
 					margin-top: 0;
 					@include screen(small) {
+						margin-top: 20px;
+					}
+					@include screen(medium) {
 						margin-top: 50px;
 					}
 				}
