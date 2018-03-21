@@ -5,6 +5,9 @@ import Masonry from 'masonry-layout';
 export default class MasonryLayout {
 	constructor() {
 		this.layout();
+		$(window).on('resize', () => {
+			this.layout();
+		})
 	}
 	layout() {
 		jQueryBridget( 'masonry', Masonry, $ );

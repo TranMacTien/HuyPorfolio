@@ -54,8 +54,11 @@
 					border-bottom: 1px solid $color-gray_l;
 				}
 				.nav__item {
-
 					color: #000;
+					transition: all .5s ease;
+					&:hover {
+						color: $color-gray_l;
+					}
 				}
 
 			}
@@ -97,7 +100,6 @@
 			height: 100%;
 			background: #fff;
 			overflow: hidden;
-			overflow-anchor: none;
 			transform: translate3d(-310px, 0, 0);
 			transition: all .6s cubic-bezier(1, 0, 0, 1);
 			&.active {
@@ -119,7 +121,7 @@
 				}
 				&:before {
 					transform: translate(-50%, -50%) rotate(45deg);
-					
+
 				}
 				&:after {
 					transform: translate(-50%, -50%) rotate(-45deg);
@@ -167,6 +169,10 @@
 				padding: 0 20px;
 				font-size: 18px;
 				font-weight: bold;
+				transition: all .5s ease;
+				&:hover {
+					opacity: 0.5;
+				}
 			}
 		}
 	}

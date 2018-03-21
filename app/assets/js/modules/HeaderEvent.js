@@ -17,6 +17,7 @@ export default class HeaderEvent {
 		this.menuBtnEvent();
 		this.menuCloseEvent();
 		this.handleLogo();
+		this.navbarEvent();
 	}
 
 	menuBtnEvent() {
@@ -43,6 +44,21 @@ export default class HeaderEvent {
 				this.logo.addClass('fixed');
 			} else if($(window).scrollTop() <= 300) {
 				this.logo.removeClass('fixed');
+			}
+		})
+	}
+	navbarEvent() {
+		this.navbarItem = $('.nav__item');
+		this.navbarItem.on('click', (e) => {
+			e.preventDefault();
+			const _this = $(e.target);
+			const scrollAnchor = _this.attr('data-scroll');
+			if(scrollAnchor === 'home') {
+
+			} else if(scrollAnchor === 'contact') {
+
+			} else {
+
 			}
 		})
 	}
